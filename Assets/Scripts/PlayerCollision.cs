@@ -10,6 +10,8 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log("We hit obstacle.");
             playermove.enabled = false;
+            FindObjectOfType <GameManager>().EndGame();// FindObjectOfType<GameManager>()這會去遍歷所有gameobject，直到找到型別是GameManager的component(這個型別指的是他的class確實叫
+                                                       //GameManager)，再回傳那個class的參考
         }
     }
 }
