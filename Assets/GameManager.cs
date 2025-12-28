@@ -5,6 +5,13 @@ public class GameManager : MonoBehaviour
     bool GameHasEnded = false;
 
     public float restartDelay = 1f;
+
+    public GameObject completelevelUI;//我只是要開關他可以用gameobject，但如果要用到裡面的component就不這樣
+
+    public void levelcomplete() 
+    {
+        completelevelUI.SetActive(true);
+    }
     public void EndGame()
     {
         if (GameHasEnded == false) 
